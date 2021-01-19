@@ -10,5 +10,20 @@
 
 package model
 
+import (
+	"net/http"
+	"net/url"
+)
+
 type ContextRT struct {
+	FnID        string
+	ResidentID  string
+	ReqestID    string
+	ResToken    string
+	Method      string
+	EventSource string
+	Resource    string
+	Host        string
+	Query       url.Values
+	Header      http.Header
 }

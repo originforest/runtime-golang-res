@@ -10,5 +10,21 @@
 
 package model
 
-type EventRT interface {
+import (
+	"io"
+	"net/http"
+)
+
+//
+type EventResult struct {
+	Header     http.Header
+	StatusCode int
+	Body       io.Writer
+}
+
+type EventRT struct {
+	ContentLength uint64
+	ContentType   string
+	Body          io.ReadCloser
+	Result        EventResult
 }
