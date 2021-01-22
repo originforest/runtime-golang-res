@@ -15,15 +15,16 @@ import (
 	"net/url"
 )
 
+// A ContextRT contain FaaS event meta-datas
 type ContextRT struct {
-	FnID        string
-	ResidentID  string
-	ReqestID    string
-	ResToken    string
-	Method      string
-	EventSource string
-	Resource    string
-	Host        string
-	Query       url.Values
-	Header      http.Header
+	FnID       string      // function ID
+	ResidentID string      // resident ID
+	ReqestID   string      // current request ID
+	ResToken   string      // cloud resource token
+	Method     string      // method
+	EventSrc   string      // event source name
+	Resource   string      // event resource path
+	Host       string      // host name of event trigger's
+	Query      url.Values  // query data in event URI
+	Header     http.Header // event headers
 }
