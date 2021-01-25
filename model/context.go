@@ -19,10 +19,10 @@ import (
 type ContextRT struct {
 	FnID       string      // function ID
 	ResidentID string      // resident ID
-	ReqestID   string      // current request ID
+	RequestID  string      // current request ID
 	ResToken   string      // cloud resource token
 	Method     string      // method
-	EventSrc   string      // event source name
+	EventName  string      // event source name
 	Resource   string      // event resource path
 	Host       string      // host name of event trigger's
 	Query      url.Values  // query data in event URI
