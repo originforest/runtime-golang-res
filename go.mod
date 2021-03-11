@@ -1,3 +1,3 @@
-module github.com/bpfaas/runtime-golang-res
+module github.com/originforest/runtime-golang-res
 
 go 1.14
